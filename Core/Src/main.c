@@ -352,11 +352,11 @@ void control_EEV(){
 	}
 }
 void test_EEV(){
-	static uint8_t run = 0;
-	if(!Stepper_IsMoving(&motor) && run == 0){
-		Stepper_Move(&motor, 500);
-		run = 1;
-	}
+//	static uint8_t run = 0;
+//	if(!Stepper_IsMoving(&motor) && run == 0){
+//		Stepper_Move(&motor, 500);
+//		run = 1;
+//	}
 
 //	if(!Stepper_IsMoving(&motor) && run == 1){
 //		Stepper_Move(&motor, -500);
@@ -480,6 +480,7 @@ int main(void)
 //		        // Infinite loop; program will get stuck here unless there's a break condition
 //		    }
 //	  }
+	  Data_Write();
 	  modbus_communication();
 	  reset_uart();
 	  HAL_IWDG_Refresh(&hiwdg);

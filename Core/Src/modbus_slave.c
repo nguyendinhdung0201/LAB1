@@ -185,7 +185,7 @@ void Modbus_UartRxCpltCallback(ModbusHandle* modbus, uint16_t Size) {
     Modbus_ProcessData(modbus);
     HAL_UARTEx_ReceiveToIdle_DMA(modbus->huart, modbus->rxBuffer, MODBUS_RX_BUFFER_SIZE);
 }
-void Data_Write(ModbusHandle* modbus){
+void Data_Write(){
 	if(check_feedback_data == 1){
 		if(nhiet_do_bat_lam_mat != holdingRegs_cpy[30] || nhiet_do_tat_lam_mat !=  holdingRegs_cpy[31]){
 			AT24C01_Write_2_Bytes(&at24c01, 0, 1, holdingRegs_cpy[30]);

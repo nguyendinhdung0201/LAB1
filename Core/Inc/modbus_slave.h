@@ -69,5 +69,5 @@ void Modbus_ProcessData(ModbusHandle* modbus);
 
 // Hàm callback khi nhận dữ liệu
 void Modbus_UartRxCpltCallback(ModbusHandle* modbus, uint16_t Size);
-void Data_Write(ModbusHandle* modbus);
+void Data_Write();
 #endif /* INC_MODBUS_SLAVE_H_ */

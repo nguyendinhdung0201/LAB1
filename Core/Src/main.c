@@ -352,11 +352,12 @@ void control_EEV(){
 	}
 }
 void test_EEV(){
-//	static uint8_t run = 0;
-//	if(!Stepper_IsMoving(&motor) && run == 0){
-//		Stepper_Move(&motor, 500);
-//		run = 1;
-//	}
+	static uint8_t run = 0;
+	if(!Stepper_IsMoving(&motor) && run == 0){
+		Stepper_Move(&motor, 500);
+		run = 1;
+	}
+
 //	if(!Stepper_IsMoving(&motor) && run == 1){
 //		Stepper_Move(&motor, -500);
 //		run = 0;
